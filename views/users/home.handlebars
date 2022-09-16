@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>CRUD Database</h2>
+   <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+    <tbody>
+        {{#each user}}
+            <tr>
+                <th>{{this.id}}</th>
+                <th>{{this.nome}}</th>
+                <th>{{this.email}}</th>
+                <th>{{this.telefone}}</th>
+                <th>
+                    <a href="/edit/{{this.id}}" class="btn btn-success btn-sm rounded-0" title="Edit">
+                        <i class="bi bi-pen"></i>
+                    </a>
+                </th>
+                <th>
+                    <form action="/delete" method="post">
+                        <input type="hidden" name="id" value="{{this.id}}">
+                        <button class="btn btn-danger btn-sm rounded-0" title="Delete"><i class="bi bi-x-lg"></i></button>
+                    </form>
+                </th>
+            </tr>
+        {{/each}}
+    </tbody>
+    </table> 
+</div>
