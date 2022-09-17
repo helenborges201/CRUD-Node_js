@@ -36,10 +36,9 @@ app.get("/", UserContoller.showUsers)
 
 conn.sync()
 .then(() => {
-    let app_port = process.env.YOUR_PORT || process.env.PORT || 80;
-    let app_host = process.env.YOUR_HOST || '0.0.0.0';
-    app.listen(app_port, app_host, function() {
-        console.log('Listening on port %d', app_port);
-    });  
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+        console.log(`Our app is running on port ${ PORT }`);
+    }); 
 })
 .catch((err) => console.log("Aconteceu um erro: " + err))
