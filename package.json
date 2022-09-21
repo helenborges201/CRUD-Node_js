@@ -4,7 +4,8 @@
   "description": "Um CRUD simples feito em Node.js",
   "main": "index.js",
   "engines": {
-    "node": "16.x"
+    "node": "16.x",
+    "npm": "8.x"
   },
 
   "scripts": {
