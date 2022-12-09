@@ -1,0 +1,7 @@
+{
+  "name": "crud",
+  "packageManager": "yarn@3.3.0",
+  "scripts": {
+    "start": "node index.js "
+  }
+}
