@@ -2,6 +2,7 @@ const  { Sequelize } = require("sequelize");
 const sequelize = new Sequelize("users", "root", "31413484h", {
     host: "localhost",
     dialect: "mysql",
+    port: "3306"
 })
 
 try {
