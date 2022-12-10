@@ -36,7 +36,7 @@ app.get("/", UserContoller.showUsers)
 
 conn.sync()
 .then(() => {
-    const PORT = process.env.PORT ||000;
+    const PORT =  3process.env.PORT ||000;
     app.listen(PORT, () => {
         console.log(`Our app is running on port ${ PORT }`);
     }); 
