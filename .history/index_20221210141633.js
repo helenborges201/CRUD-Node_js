@@ -34,7 +34,7 @@ app.use(express.static("public"))
 app.use("/", usersRoutes)
 app.get("/", UserContoller.showUsers)
 
-conn.sync({ force: true })
+conn.sync()
 .then(() => {
     const PORT = 3000;
     app.listen(PORT, () => {
